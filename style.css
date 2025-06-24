@@ -1,6 +1,18 @@
 *{
     font-family: "Inter Tight", sans-serif;
 }
+
+
+:root{
+  --blue-violet: #8a2be2;
+  --white-color: #ffffff; 
+  --grey-color: rgb(134, 133, 133);
+  --header-footer-color: rgb(237, 236, 236);
+}
+
+
+/* //////////////////////////////nav animation//////////////////////// */
+
 .menu::before {
   content: "";
   position: absolute;
@@ -19,28 +31,73 @@
   transform: scaleX(1);
 }
 
-/* 
-.typing{
-    display: inline-block;
-  overflow: hidden;             
-  border-right: 2px solid blueviolet; 
-  white-space: nowrap;          
-  margin: 0 auto;
-  letter-spacing: 2px;
-  animation: typing 3s steps(30, end) 4s infinite alternate, blink 0.7s step-end infinite;
-  width: 100%; 
+/* ///////////////////////////////////////////////////////////////////// */
+
+
+nav, footer{
+  background-color: var(--header-footer-color);
 }
 
-@keyframes typing {
-  from 
-  {width: 0; }
-  to { width: 100%; }
+.nav-list i{
+  color: var(--blue-violet);
 }
 
-@keyframes blink {
-  50% { border-color: transparent; }
-} */
+.button{
+  background-color: var(--blue-violet);
+  color: white;
+  border: 3px solid var(--blue-violet);
+}
 
+.button:hover{
+  background-color: var(--white-color);
+  border: 3px solid var(--blue-violet);
+  color: var(--blue-violet);
+}
+
+.hero-1{
+  /* min-height: 600px; */
+}
+
+.hero-child h4{
+   font-size: clamp(25px, 4vw, 45px);
+}
+
+
+.hero-child h1{
+  color: var(--blue-violet);
+  font-size: clamp(42px, 6vw, 65px);
+  font-weight: 700;
+}
+
+.hero-child ,.hero-2 p{
+  font-size: clamp(16px, 2vw, 22px);
+}
+
+/* ///////////////////////////////////////////////////// */
+
+
+.section-heading h3{
+  font-size: clamp(42px, 8vw, 65px);
+  color: var(--blue-violet);
+}
+
+.card-img-box{
+  height: 30vh;
+  border-bottom: 1.5px solid rgb(218, 215, 215);
+}
+
+
+.card-img-box img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.small-card , .project-card{
+  max-width: 25rem;
+}
+
+/* //////////////////////////////////small card animation///////////////////////////////// */
 
 .small-card {
   transition: all 0.3s ease;
@@ -54,53 +111,124 @@
 }
 
 
+/* ////////////////////////////////////project card animation////////////////////////////// */
+
 .right-hover {
-    transition: transform 0.3s ease; box-shadow 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .right-hover:hover {
     transform: translateX(15px);
+    transition: all  0.3s ease;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
   }
 
   .left-hover {
-    transition: transform 0.3s ease; box-shadow 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .left-hover:hover {
     transform: translateX(-15px);
+    transition: all 0.3s ease;;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
   }
 
+  /* //////////////////////////////////////All card animation/////////////////////////////// */
 
-  .inputs {
+  .card-content{
+  transition: 0.3s all ease;
+}
+
+.card-content:hover{
+  background-color: var(--blue-violet);
+}
+
+.card-content:hover h5{
+  color: var(--white-color);
+}
+
+.card-content:hover p{
+  color: var(--white-color);
+}
+
+.card-content:hover a{
+  border: 2px solid var(--white-color);
+  background-color: var(--white-color) !important;
+  color: var(--blue-violet) !important;
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////// */
+
+.card-content h5{
+  color: var(--blue-violet);
+
+}
+
+.card-content a{
+  background-color: var(--blue-violet) !important;
+  color: var(--white-color) !important;
+  border: 2px solid var(--blue-violet);
+}
+
+
+.project-img{
+  height: 30vh;
+  border-bottom: 1.5px solid rgb(218, 215, 215);
+}
+
+.project-img img{
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+span{
+  color: var(--blue-violet);
+}
+
+.connect-heading h4{
+  font-size: clamp(20px, 5vw, 35px);
+  color: var(--blue-violet);
+}
+
+.contact-container{
+  min-height: 830px;
+}
+
+.inputs {
+    width: 100%;
   max-width: 400px;
-  padding: 7px 20px;
+  padding: 6px 20px ;
   color: #56195e;
-  border-radius: 6px;
+  border-radius: 6px !important;
   outline: none;
 }
 
-
-label{
-  font-size: 18px;
-  
-}
 .-inputs::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
+
+label{
+  font-size: 18px; 
+}
+
 textarea{
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #38173c;;
+  border-radius: 6px !important;
   outline: none;
 }
+
+/* /////////////////////////////////inputs animation////////////////////////////////// */
 
 .inputs:focus, textarea:focus {
   border-color: #4d90fe;
     box-shadow: 0 0 8px 3px rgba(77, 144, 254, 0.5);
     animation: blur-glow 0.4s ease-in-out forwards;
 }
-
 
 @keyframes blur-glow {
     0% {
@@ -111,123 +239,84 @@ textarea{
     }
   }
 
-  .social-link{
-    transition: color 0.3s ease;
+/* /////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.footer-heading{
+  color: var(--blue-violet);
+}
+
+.copyright p{
+  font-size: 14px !important;
+  color: var(--grey-color);
+}
+
+/* ///////////////////////////social link animation///////////////////////////////////// */
+
+.social-link i{
+  padding-left: 11.8px;
+  padding-top: 26px;
+}
+
+.social-link{
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid rgb(88, 83, 83);
+  background-color: rgb(88, 83, 83);
+  transition: all 0.3s ease;
+ }
+
+.social-link:hover{
+  background-color: rgb(255, 255, 255);
+  border: 2px solid var(--blue-violet);
+ }
+
+.social-link i{
+ transition: all 0.3s ease;
+ }
+
+.social-link:hover i{
+ color: var(--blue-violet) !important; 
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////// */
+
+.author-name p{
+ font-size: clamp(18px, 6vw, 20px);
+ color: var(--blue-violet);
+}
+
+
+
+  /* ////////////////////////////////// madia Query for large screen//////////////////////////////////////// */
+
+
+
+@media (min-width: 992px){
+  .project-card{
+    max-width: 65rem !important;
+    min-height: 38vh !important;
   }
 
-  .social-link:hover{
-    color: #8a2be2 !important; 
+  .project-img{
+    max-width: 40rem !important;
+    height: 100%;
+    border-right: 1.5px solid rgb(218, 215, 215);
+    border-bottom: 0px;
   }
 
-@media (max-width: 576px) {
+  .project-img img{
+    height: 100% !important;
+    width: 39rem;
+    object-fit: cover !important;
+  }
 
-    .section-1{
-        height: 720px !important;
-        background-color: #56195e;
-    }
-    .hero-1{
-        width: 100%;
-    }
+  .project-content{
+    width: 20rem !important;
+    height: 38vh !important;
+  }
 
-    .hero-1-child-1 h2{
-        font-size: 25px !important;
-    }
-
-    .child-1-inner-1 h1{
-        font-size: 35px !important;
-    }
-
-    .child-1-inner-2 p{
-        font-size: 14px !important;
-    }
-
-    .hero-image img{
-        margin-left: 20px !important;
-        width: 300px !important;
-        height: 300px;
-    }
-
-    .section-2{
-        height: 2800px !important;
-    }
-
-    .section-heading h3{
-        font-size: 35px !important;
-    }
-
-
-    .small-card{
-        width: 20rem !important;
-    }
-
-    .card-box{
-        width: 320px !important;
-    }
-
-    .section-3{
-        height: 3150px !important;
-    }
-
-
-    .section-4{
-      height: 900px !important;
-    }
-    .section-3-inner{
-        width: 100% !important;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-img{
-        min-height: 35vh !important;
-    }
-
-    .project-img img{
-        object-fit: cover !important;
-    }
-
-    .img-1{
-        display: none;
-
-    }
-
-    .section-5{
-      height: 980px;
-    }
-
-    .img-2{
-        display: block !important;
-        object-fit: cover !important;
-        height: 253px;
-        width: 100%;
-    }
-
-    .about-img{
-        display: none;
-    }
-
-    .about-para{
-        width: 100% !important;
-    }
-
-  .inputs {
-  width: 300px !important;
-  padding: 4px 15px;
-  color: #56195e;
-  border-radius: 6px;
-  outline: none;
-}
-
-.vedeo{
-  width: 200px;
-}
-textarea{
-  width: 300px;
-}
-
-.vedeo video{
-  width: 280px !important;
-}
-
+  
 }
